@@ -37,8 +37,18 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr;
   margin-bottom: 1rem;
+  align-content: center;
+  align-items: center;
 }
 
+.res-tab:hover {
+  background: #e4e4e4;
+  cursor: pointer;
+}
+
+.res-tab-clicked {
+  background: #e4e4e4;
+}
 img {
   border-radius: 50rem;
   height: 5rem;

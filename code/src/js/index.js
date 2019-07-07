@@ -1,4 +1,10 @@
+// Models
 import Search from "./models/Search";
+
+// Views
+import * as searchView from "./views/searchView";
+
+import { uiElements } from "./views/base";
 
 // imports
 
@@ -7,7 +13,7 @@ const state = {};
 
 const controlSearch = async () => {
   // 1) get query from view
-  const query = "pizza"; // TODO
+  const query = searchView.getSearchQuery(); // TODO
   if (query) {
     // 2) new search object and add to state
     state.search = new Search(query);
@@ -15,6 +21,8 @@ const controlSearch = async () => {
     // 3) prepare ui for results
     // clear res list
     // clear search input
+    searchView.clearSearchInput();
+
     // render loader feedback
 
     try {
@@ -22,6 +30,7 @@ const controlSearch = async () => {
       await state.search.getResults(query);
 
       // 5) render results on UI
+      searchView.renderRecipes(state.search.results);
       console.log(state.search.results);
 
       // clear loader
@@ -33,6 +42,7 @@ const controlSearch = async () => {
   }
 };
 
+// button clicks
 // get the search button put summit event on it call controll search
 document.querySelector(".search-form").addEventListener("submit", e => {
   e.preventDefault();
