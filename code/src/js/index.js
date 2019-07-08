@@ -20,6 +20,7 @@ const controlSearch = async () => {
 
     // 3) prepare ui for results
     // clear res list
+    searchView.clearSearchResults();
     // clear search input
     searchView.clearSearchInput();
 
@@ -30,12 +31,7 @@ const controlSearch = async () => {
       await state.search.getResults(query);
 
       // 5) render results on UI
-      document
-        .querySelector(".main-col-1")
-        .insertAdjacentHTML(
-          "afterbegin",
-          `<h2 class="res-for">Results for "${query}"</h2>`
-        );
+      searchView.renderResultsForLabel(query);
       searchView.renderRecipes(state.search.results);
       console.log(state.search.results);
 

@@ -7,6 +7,10 @@ export const clearSearchInput = () => {
 export const getSearchQuery = () => {
   return uiElements.searchInput.value;
 };
+export const renderResultsForLabel = query => {
+  const markup = `<h2 class="res-for">Results for "${query}"</h2>`;
+  uiElements.resForLabel.insertAdjacentHTML("afterbegin", markup);
+};
 
 export const renderRecipes = recipes => {
   console.log(recipes);
@@ -26,4 +30,9 @@ export const renderRecipes = recipes => {
 
     uiElements.recipeSearchResultsList.insertAdjacentHTML("beforeend", markup);
   });
+};
+
+export const clearSearchResults = () => {
+  uiElements.recipeSearchResultsList.innerHTML = "";
+  uiElements.resForLabel.innerHTML = "";
 };
