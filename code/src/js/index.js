@@ -30,6 +30,12 @@ const controlSearch = async () => {
       await state.search.getResults(query);
 
       // 5) render results on UI
+      document
+        .querySelector(".main-col-1")
+        .insertAdjacentHTML(
+          "afterbegin",
+          `<h2 class="res-for">Results for "${query}"</h2>`
+        );
       searchView.renderRecipes(state.search.results);
       console.log(state.search.results);
 

@@ -18,7 +18,7 @@ export const renderRecipes = recipes => {
           <img src="${recipe.image_url}" alt="${recipe.title}" />
           <div class="recipe-details">
             <p>${recipe.title}</p>
-            <p>${recipe.publisher}</p>
+            <p>by ${recipe.publisher}</p>
           </div>
         </div>
       </a>

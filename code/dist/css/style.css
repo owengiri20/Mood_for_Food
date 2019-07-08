@@ -29,6 +29,9 @@ body {
   margin-left: 1rem;
 }
 
+.res-for {
+}
+
 .list-res {
   max-height: 80vh;
   overflow-y: scroll;
@@ -45,13 +48,24 @@ body {
   background: #e4e4e4;
   cursor: pointer;
 }
-
+a {
+  text-decoration: none;
+}
 .res-tab-clicked {
   background: #e4e4e4;
 }
+
+.recipe-details {
+  color: #000;
+}
+.recipe-details p {
+  text-decoration: none;
+}
+
 img {
   border-radius: 50rem;
-  height: 5rem;
+  height: 4rem;
+  width: 3.3rem;
   margin-left: 0.7rem;
 }
 
