@@ -13,7 +13,7 @@ export const renderRecipes = recipes => {
 
   recipes.forEach(recipe => {
     const markup = `
-        <a href="${recipe.recipe_id}" class="recipe-link">
+        <a href="#${recipe.recipe_id}" class="recipe-link">
         <div class="res-tab">
           <img src="${recipe.image_url}" alt="${recipe.title}" />
           <div class="recipe-details">
