@@ -1,11 +1,11 @@
 // Models
 import Search from "./models/Search";
-
+import Recipe from "./models/Recipe";
 // Views
 import * as searchView from "./views/searchView";
+import * as recipeView from "./views/recipeView";
 
 import { uiElements } from "./views/base";
-import Recipe from "./models/Recipe";
 
 // imports
 
@@ -73,6 +73,7 @@ const controlRecipe = async () => {
       state.recipe.calculateServings();
 
       // render recipe in UI
+      recipeView.renderRecipe(state.recipe);
     } catch (error) {
       console.log("error RECIPE :" + error);
     }
