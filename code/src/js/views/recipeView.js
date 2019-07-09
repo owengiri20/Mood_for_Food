@@ -18,7 +18,7 @@ export const renderRecipe = recipe => {
             <h2 class="author-label">by ${recipe.author}</h2>
             <button class="save-recipe">save</button>
             <p class="servings-label">2-4 servings</p>
-            <p class="time-label">${recipe.time} mins</p>
+            <p class="time-label">time to make: ${recipe.time} mins </p>
             <a href="${recipe.source}" target="_blank" class="see-more"
               >more about this recipe...</a
             >

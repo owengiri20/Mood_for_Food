@@ -147,7 +147,12 @@ img {
   padding: 1rem;
   z-index: 100;
 }
-
+.save-recipe {
+  margin-right: 1rem;
+  border: 0;
+  padding: 1rem;
+  border-radius: 25px;
+}
 .content-details {
   margin-left: 0.3rem;
 }
