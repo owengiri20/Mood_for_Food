@@ -15,21 +15,23 @@ export const renderRecipe = recipe => {
             <div class="color-overlay"></div>
           </div>
           <div class="content-details">
-            <h1 class="ing-title">Ingredients</h1>
+            <h2 class="author-label">by ${recipe.author}</h2>
             <button class="save-recipe">save</button>
-            <h2 class="author-label">${recipe.author}</h2>
             <p class="servings-label">2-4 servings</p>
-            <p class="time-label">${recipe.calcTime}</p>
+            <p class="time-label">${recipe.time} mins</p>
             <a href="${recipe.source}" target="_blank" class="see-more"
               >more about this recipe...</a
             >
+            <h2 class="ing-title">Ingredients</h2>
           </div>
-
           <span></span>
+          
           <ul class="ing-list">
-          ${recipe.ingredients.forEach(ingredient => {
-            return `<li>${ingredient}</li>`;
-          })}
+          ${recipe.ingredients
+            .map(ingredient => {
+              return `<li>${ingredient}</li>`;
+            })
+            .join("")}
           </ul>
     `;
 

@@ -20,6 +20,7 @@ export default class Recipe {
       // turn that recipe to an obj
       this.title = result.data.recipe.title;
       this.img = result.data.recipe.image_url;
+      this.author = result.data.recipe.publisher;
       this.ingredients = result.data.recipe.ingredients;
       this.source = result.data.recipe.source_url;
     } catch (error) {
