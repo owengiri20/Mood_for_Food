@@ -19,7 +19,7 @@ export default class Recipe {
       );
       // turn that recipe to an obj
       this.title = result.data.recipe.title;
-      this.img = result.data.recipe.img_url;
+      this.img = result.data.recipe.image_url;
       this.ingredients = result.data.recipe.ingredients;
       this.source = result.data.recipe.source_url;
     } catch (error) {
@@ -29,5 +29,9 @@ export default class Recipe {
 
   calculateTime() {
     this.time = Math.floor((this.ingredients.length / 3) * 15);
+  }
+
+  calculateServings() {
+    this.servings = 4;
   }
 }
