@@ -29,7 +29,7 @@ export default class Recipe {
   }
 
   calculateTime() {
-    this.time = Math.floor((this.ingredients.length / 3) * 15);
+    this.time = Math.floor((this.ingredients.length / 3) * 12);
   }
 
   calculateServings() {

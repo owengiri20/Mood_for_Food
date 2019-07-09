@@ -32,15 +32,12 @@ const controlSearch = async () => {
       // 4) Search for recipes
       await state.search.getResults(query);
 
-      if (state.search.results.length > 0) {
-        // 5) render results on UI
-        searchView.renderResultsForLabel(query);
-        searchView.renderRecipes(state.search.results);
-        console.log(state.search.results);
-      } else {
-        console.log("no recipes");
-        // TODO
-      }
+      // 5) render results on UI
+      searchView.renderResultsForLabel(query, state.search.results.length);
+      console.log(state.search.results.length);
+
+      searchView.renderRecipes(state.search.results);
+      console.log(state.search.results);
 
       // clear loader
     } catch (error) {

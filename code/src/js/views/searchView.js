@@ -7,8 +7,14 @@ export const clearSearchInput = () => {
 export const getSearchQuery = () => {
   return uiElements.searchInput.value;
 };
-export const renderResultsForLabel = query => {
-  const markup = `<h2 class="res-for">Results for "${query}"</h2>`;
+export const renderResultsForLabel = (query, recipeLength) => {
+  let markup = "";
+  if (recipeLength > 0) {
+    markup = `<h2 class="res-for">Results for "${query}"</h2>`;
+  } else {
+    markup = `<h2 class="res-for">no results "${query}"</h2>`;
+  }
+
   uiElements.resForLabel.insertAdjacentHTML("afterbegin", markup);
 };
 
