@@ -188,6 +188,89 @@ img {
   border-radius: 100px;
 }
 
+/* Saved drop down */
+/* Dropdown Button */
+.dropbtn {
+  background-color: #4caf50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  /* display: inline-block; */
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  /* display: none; */
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 13rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  transition: ease-in-out 0.3s;
+}
+
+.dropdown-content li {
+  list-style: none;
+  /* display: flex;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  justify-content: space-around; */
+}
+
+.save-link-content {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: center;
+  justify-self: center;
+}
+
+.save-link-content img {
+  margin: 0;
+  height: 2rem;
+  width: 2rem;
+}
+
+.save-link-content p {
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+.dropdown-content ul {
+  padding: 0;
+  transition: ease-in-out 0.2s;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 1rem;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  transition: ease-in-out 0.2s;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
 /* MEDIA QUERIES */
 /* IPAD */
 @media screen and (max-width: 778px) {
