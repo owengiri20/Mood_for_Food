@@ -60,6 +60,7 @@ const controlRecipe = async () => {
     // prepare UI for changes
     state.recipe = new Recipe(id);
     // clear old recipe
+    recipeView.clearRecipe();
 
     // render loader
 
