@@ -1,6 +1,7 @@
 // Models
 import Search from "./models/Search";
 import Recipe from "./models/Recipe";
+import Saves from "./models/Saves";
 // Views
 import * as searchView from "./views/searchView";
 import * as recipeView from "./views/recipeView";
@@ -76,6 +77,18 @@ const controlRecipe = async () => {
       console.log("error RECIPE :" + error);
     }
   }
+};
+
+// Save Controller
+state.saves = new Saves();
+const saveController = () => {
+  // get id
+  if (!state.saves) state.saves = new Saves();
+  const currentId = state.recipe.id;
+
+  // get recipe to save
+  // save that recipe in state
+  // add to ui
 };
 
 // button clicks
