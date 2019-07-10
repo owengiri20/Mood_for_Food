@@ -10,12 +10,15 @@ export default class Saves {
       id: recipe.id
     };
     this.savesArr.push(savedRecipe);
+    this.saveData();
+
     return savedRecipe;
   }
 
   deleteSaved(id) {
     const recipeIndex = this.savesArr.findIndex(r => r.id == id);
     this.savesArr.splice(recipeIndex, 1);
+    this.saveData();
   }
 
   isSaved(id) {
@@ -23,5 +26,15 @@ export default class Saves {
   }
   getNumSaves() {
     return this.savesArr.length;
+  }
+
+  // write
+  saveData() {
+    localStorage.setItem("savedRecipes", JSON.stringify(this.savesArr));
+  }
+
+  readData() {
+    let storage = JSON.parse(localStorage.getItem("savedRecipes"));
+    if (storage) this.savesArr = storage;
   }
 }

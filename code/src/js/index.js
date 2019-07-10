@@ -5,6 +5,7 @@ import Saves from "./models/Saves";
 // Views
 import * as searchView from "./views/searchView";
 import * as recipeView from "./views/recipeView";
+import * as savesView from "./views/savesView";
 
 import { uiElements } from "./views/base";
 
@@ -85,7 +86,6 @@ const controlSaves = () => {
   // get id
   if (!state.saves) state.saves = new Saves();
   const currentId = state.recipe.id;
-
   // get recipe to save
   if (!state.saves.isSaved(currentId)) {
     // save that recipe in state
@@ -95,6 +95,8 @@ const controlSaves = () => {
   }
 
   // add to ui
+  savesView.clearSavedUI();
+  savesView.renderSaves(state.saves.savesArr);
 };
 
 // button clicks
@@ -105,6 +107,15 @@ document.querySelector(".search-form").addEventListener("submit", e => {
 });
 
 window.addEventListener("hashchange", controlRecipe);
+window.addEventListener("load", controlRecipe);
+
+window.addEventListener("load", () => {
+  state.saves = new Saves();
+  state.saves.readData();
+  savesView.clearSavedUI();
+  savesView.renderSaves(state.saves.savesArr);
+});
+
 window.state = state;
 
 uiElements.recipe.addEventListener("click", e => {

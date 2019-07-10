@@ -3,5 +3,6 @@ export const uiElements = {
   recipeSearchResultsList: document.querySelector(".list-res"),
   resForLabel: document.querySelector(".res-for-recipe"),
   recipe: document.querySelector(".recipe-show"),
-  recipeImg: document.querySelector(".recipe-img")
+  recipeImg: document.querySelector(".recipe-img"),
+  savedList: document.querySelector(".saved-list")
 };
