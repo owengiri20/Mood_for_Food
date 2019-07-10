@@ -81,13 +81,19 @@ const controlRecipe = async () => {
 
 // Save Controller
 state.saves = new Saves();
-const saveController = () => {
+const controlSaves = () => {
   // get id
   if (!state.saves) state.saves = new Saves();
   const currentId = state.recipe.id;
 
   // get recipe to save
-  // save that recipe in state
+  if (!state.saves.isSaved(currentId)) {
+    // save that recipe in state
+    state.saves.addSave(state.recipe);
+  } else {
+    state.saves.deleteSaved(currentId);
+  }
+
   // add to ui
 };
 
@@ -100,3 +106,9 @@ document.querySelector(".search-form").addEventListener("submit", e => {
 
 window.addEventListener("hashchange", controlRecipe);
 window.state = state;
+
+uiElements.recipe.addEventListener("click", e => {
+  if (e.target.matches(".save-recipe, .save-recipe *")) {
+    controlSaves();
+  }
+});
