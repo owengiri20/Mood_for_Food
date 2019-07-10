@@ -147,6 +147,11 @@ img {
   padding: 1rem;
   z-index: 100;
 }
+
+.saved-list {
+  overflow-y: scroll;
+  max-height: 40vh;
+}
 .save-recipe {
   margin-right: 1rem;
   border: 0;
