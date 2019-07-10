@@ -73,7 +73,7 @@ const controlRecipe = async () => {
       state.recipe.calculateServings();
 
       // render recipe in UI
-      recipeView.renderRecipe(state.recipe);
+      recipeView.renderRecipe(state.recipe, state.saves.isSaved(id));
     } catch (error) {
       console.log("error RECIPE :" + error);
     }
@@ -89,9 +89,11 @@ const controlSaves = () => {
   // get recipe to save
   if (!state.saves.isSaved(currentId)) {
     // save that recipe in state
+    savesView.toggleSaveBtn(true);
     state.saves.addSave(state.recipe);
   } else {
     state.saves.deleteSaved(currentId);
+    savesView.toggleSaveBtn(false);
   }
 
   // add to ui

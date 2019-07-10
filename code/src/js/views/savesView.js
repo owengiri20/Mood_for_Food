@@ -17,6 +17,11 @@ export const renderSaves = saves => {
     </a>
     </li>
     `;
-    uiElements.savedList.insertAdjacentHTML("beforeend", markup);
+    uiElements.savedList.insertAdjacentHTML("afterbegin", markup);
   });
+};
+
+export const toggleSaveBtn = isSaved => {
+  const iconString = isSaved ? "fas fa-bookmark" : "far fa-bookmark";
+  document.querySelector(".save-recipe i").className = iconString;
 };

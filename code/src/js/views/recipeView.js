@@ -4,7 +4,7 @@ export const clearRecipe = () => {
   uiElements.recipe.innerHTML = "";
 };
 
-export const renderRecipe = recipe => {
+export const renderRecipe = (recipe, isSaved) => {
   //   uiElements.recipeImg.style.background = ``;
 
   const markup = `
@@ -15,8 +15,12 @@ export const renderRecipe = recipe => {
             <div class="color-overlay"></div>
           </div>
           <div class="content-details">
-            <h2 class="author-label">by ${recipe.author}</h2>
-            <button class="save-recipe">save</button>
+          <div class="author-save">
+          <h2 class="author-label">by ${recipe.author}</h2>
+          <button class="save-recipe">
+            <i class="${isSaved ? "fas" : "far"} fa-bookmark"></i>
+          </button>
+        </div>
             <p class="servings-label">2-4 servings</p>
             <p class="time-label">time to make: ${recipe.time} mins </p>
             <a href="${recipe.source}" target="_blank" class="see-more"

@@ -154,12 +154,19 @@ img {
 }
 .save-recipe {
   margin-right: 1rem;
+  margin-left: 0.5rem;
+
   border: 0;
-  padding: 1rem;
+  padding: 0.1rem 1.1rem;
   border-radius: 25px;
 }
 .content-details {
   margin-left: 0.3rem;
+  margin-top: 1rem;
+}
+
+.author-save {
+  display: flex;
 }
 
 .ing-list {
@@ -308,7 +315,9 @@ img {
     min-height: 100vh;
     overflow-y: hidden;
   }
-
+  .res-for-recipe {
+    font-size: 0.6rem;
+  }
   .main-col-1 h2 {
     font-size: 0.8rem;
     margin-top: 1rem;
@@ -316,12 +325,13 @@ img {
 
   img {
     border-radius: 50rem;
-    height: 2.2rem;
-    margin-left: 0.6rem;
+    height: 2rem;
+    width: 2rem;
+    margin-left: 0.4rem;
   }
 
   .res-tab p {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
 
   .recipe-img {
@@ -330,45 +340,120 @@ img {
 
   .ing-title {
     margin-left: 1rem;
-    font-size: 0.7rem !important;
+    font-size: 1rem !important;
   }
 
   .food-title {
     background: #0000009c;
-    padding: 0.7rem;
+    padding: 0.6rem;
     z-index: 100;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
   }
 
   .top-col-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.5fr 1.2fr;
   }
 
   .top-col-2 h2 {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 
+  .author-label {
+    font-size: 0.8rem;
+  }
   .search {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-self: center;
   }
 
   .search input,
   .search button {
-    padding: 0.4rem;
+    padding: 0.3rem;
     border-radius: 25px;
     border: 0;
-    margin: 3px;
-    font-size: 0.5rem;
+    margin: 1.5px;
+    font-size: 0.4rem;
   }
 
   .search input {
-    width: 90%;
+    width: 40%;
   }
 
   .search input {
     border: 1px #6464646f solid;
+  }
+
+  .content-details {
+    font-size: 0.8em;
+  }
+
+  .ing-list li {
+    font-size: 0.8em;
+  }
+
+  .dropdown-content {
+    /* display: none; */
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 10rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    transition: ease-in-out 0.3s;
+    font-size: 0.8em;
+  }
+
+  .dropdown-content ul {
+    padding: 0;
+    transition: ease-in-out 0.2s;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 0.6rem;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    transition: ease-in-out 0.2s;
+  }
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+
+  /* Turn on custom 8px wide scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px; /* 1px wider than Lion. */
+    /* This is more usable for users trying to click it. */
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 100px;
+  }
+  /* hover effect for both scrollbar area, and scrollbar 'thumb' */
+  ::-webkit-scrollbar:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  /* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+  ::-webkit-scrollbar-thumb:vertical {
+    /* This is the EXACT color of Mac OS scrollbars. 
+     Yes, I pulled out digital color meter */
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(0, 0, 0, 0.3); /* Some darker color when you click it */
+    border-radius: 100px;
   }
 }
