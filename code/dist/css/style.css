@@ -97,6 +97,14 @@ img {
 .top-col-2 h2 {
   margin-left: 1rem;
   font-size: 1.2rem;
+  color: #000;
+}
+
+.top-col-2 h2:hover {
+  opacity: 0.8;
+}
+.popular-searches {
+  margin-left: 1rem;
 }
 
 .search {
@@ -146,7 +154,7 @@ img {
 .pizza-panel,
 .cake-panel,
 .vegan-panel {
-  background: url("https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&h=650&w=940")
+  background: url("https://images.pexels.com/photos/825661/pexels-photo-825661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
     no-repeat center center/cover;
   display: grid;
   /* grid-template-columns: repeat(3, 1fr); */
@@ -160,6 +168,13 @@ img {
   width: 100%;
   height: 100%;
   position: relative;
+  cursor: pointer;
+}
+
+.pizza-panel:hover,
+.cake-panel:hover,
+.vegan-panel:hover {
+  opacity: 0.8;
 }
 
 .cake-panel {
@@ -206,6 +221,7 @@ img {
   background: #0000009c;
   padding: 1rem;
   z-index: 100;
+  text-align: center;
 }
 
 .food-title-content {

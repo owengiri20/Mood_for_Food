@@ -127,5 +127,13 @@ window.state = state;
 uiElements.recipe.addEventListener("click", e => {
   if (e.target.matches(".save-recipe, .save-recipe *")) {
     controlSaves();
+  } else if (e.target.matches(".pizza-panel, .pizza-panel *")) {
+    controlSearch("pizza");
+  } else if (e.target.matches(".cake-panel, .cake-panel *")) {
+    controlSearch("cake");
+  } else if (e.target.matches(".vegan-panel, .vegan-panel *")) {
+    controlSearch("vegan");
   }
 });
+
+// popalar picks clicked
