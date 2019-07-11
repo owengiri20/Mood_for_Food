@@ -157,11 +157,6 @@ img {
   background: url("https://images.pexels.com/photos/825661/pexels-photo-825661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
     no-repeat center center/cover;
   display: grid;
-  /* grid-template-columns: repeat(3, 1fr); */
-  /* align-self: center;
-    align-content: center;
-    align-items: center;
-    align-self: center; */
   color: #fff;
   justify-items: center;
   align-items: center;
@@ -258,6 +253,8 @@ img {
 
 .ing-list {
   margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .ing-list li {
@@ -394,6 +391,11 @@ img {
   .res-tab p {
     font-size: 0.8rem;
   }
+
+  .ing-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -456,23 +458,33 @@ img {
     align-self: center;
   }
 
-  .search input,
-  .search button {
-    padding: 0.3rem;
+  .search input {
+    padding: 0.5rem;
     border-radius: 25px;
     border: 0;
     margin: 1.5px;
-    font-size: 0.4rem;
+    margin-top: 4px;
+    font-size: 0.6rem;
   }
 
+  .dropbtn {
+    background-color: #4caf50;
+    color: white;
+    padding: 0.5rem;
+    font-size: 0.5rem;
+    border: none;
+  }
   .search input {
-    width: 40%;
+    width: 80%;
   }
 
   .search input {
     border: 1px #6464646f solid;
   }
 
+  .search-btn {
+    display: none;
+  }
   .shocase-start-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -506,6 +518,11 @@ img {
 
   .ing-list li {
     font-size: 0.8em;
+  }
+
+  .ing-list {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   .dropdown-content {
