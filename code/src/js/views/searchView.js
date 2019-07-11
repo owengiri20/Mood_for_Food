@@ -9,7 +9,9 @@ export const getSearchQuery = () => {
 };
 export const renderResultsForLabel = (query, recipeLength) => {
   let markup = "";
-  if (recipeLength > 0) {
+  if (query === " ") {
+    markup = `<h2 class="res-for">Popular Recipes</h2>`;
+  } else if (recipeLength > 0) {
     markup = `<h2 class="res-for">Results for "${query}"</h2>`;
   } else {
     markup = `<h2 class="res-for">no results "${query}"</h2>`;

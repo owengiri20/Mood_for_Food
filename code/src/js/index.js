@@ -15,9 +15,10 @@ import { uiElements } from "./views/base";
 const state = {};
 
 // SEARCH CONTROLLER
-const controlSearch = async () => {
+const controlSearch = async query => {
   // 1) get query from view
-  const query = searchView.getSearchQuery(); // TODO
+  if (!query) query = " ";
+  // const query = searchView.getSearchQuery(); // TODO
   if (query) {
     // 2) new search object and add to state
     state.search = new Search(query);
@@ -105,7 +106,7 @@ const controlSaves = () => {
 // get the search button put summit event on it call controll search
 document.querySelector(".search-form").addEventListener("submit", e => {
   e.preventDefault();
-  controlSearch();
+  controlSearch(searchView.getSearchQuery());
 });
 
 window.addEventListener("hashchange", controlRecipe);
@@ -118,6 +119,9 @@ window.addEventListener("load", () => {
   savesView.renderSaves(state.saves.savesArr);
 });
 
+window.addEventListener("load", () => {
+  controlSearch();
+});
 window.state = state;
 
 uiElements.recipe.addEventListener("click", e => {

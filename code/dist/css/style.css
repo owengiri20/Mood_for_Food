@@ -129,6 +129,49 @@ img {
   height: 90vh;
 }
 
+.shocase-start-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* align-self: center;
+  align-content: center;
+  align-items: center;
+  align-self: center; */
+  justify-items: center;
+  align-items: center;
+  height: 55vh;
+  grid-gap: 10px;
+  margin-top: 10px;
+}
+
+.pizza-panel,
+.cake-panel,
+.vegan-panel {
+  background: url("https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&h=650&w=940")
+    no-repeat center center/cover;
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* align-self: center;
+    align-content: center;
+    align-items: center;
+    align-self: center; */
+  color: #fff;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cake-panel {
+  background: url("https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?auto=compress&cs=tinysrgb&h=650&w=940")
+    no-repeat center center/cover;
+}
+
+.vegan-panel {
+  background: url("https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940")
+    no-repeat center center/cover;
+}
+
 .color-overlay {
   width: 100%;
   height: 100%;
@@ -137,13 +180,22 @@ img {
   position: absolute;
 }
 
+.panel-content {
+  z-index: 199;
+}
+
+.panel-title {
+  background: #0000009c;
+  padding: 1rem;
+}
+
 .recipe-img {
   display: flex;
   justify-content: center;
   align-self: center;
   align-items: center;
-  height: 23rem;
-  background: url("https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&h=650&w=940")
+  height: 45vh;
+  background: url("https://images.pexels.com/photos/54455/cook-food-kitchen-eat-54455.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
     no-repeat center center/cover;
   color: white;
   position: relative;
@@ -154,6 +206,10 @@ img {
   background: #0000009c;
   padding: 1rem;
   z-index: 100;
+}
+
+.food-title-content {
+  z-index: 101;
 }
 
 .saved-list {
@@ -401,6 +457,33 @@ img {
     border: 1px #6464646f solid;
   }
 
+  .shocase-start-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 55vh;
+    grid-gap: 10px;
+    margin-top: 10px;
+  }
+
+  .pizza-panel,
+  .cake-panel,
+  .vegan-panel {
+    display: grid;
+    font-size: 0.55rem;
+    color: #fff;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .panel-title {
+    background: #0000009c;
+    padding: 0.7rem;
+  }
   .content-details {
     font-size: 0.8em;
   }
@@ -476,4 +559,13 @@ img {
 
 button:focus {
   outline: 0 !important;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+.credits {
+  font-size: 0.6em;
+  margin-left: 3px;
+  color: #8c8c8cba;
 }
