@@ -9,7 +9,9 @@ export const renderSaves = saves => {
     <li>
     <a href="#${save.id}" class="saved-link">
     <div class="save-link-content">
-        <img src="${save.img}" alt="" srcset="" />
+        <img src="${save.img.slice(0, 4)}s${save.img.slice(
+      4
+    )}" alt="" srcset="" />
         <p>
        ${save.title}
         </p>
