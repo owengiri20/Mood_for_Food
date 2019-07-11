@@ -4,7 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Barriecito|Lato&display=swap"
+      rel="stylesheet"
+    />
+    <title>Mood For Food</title>
   </head>
-  <body><script type="text/javascript" src="js/bundle.js"></script></body>
+  <body>
+    <script src="https://kit.fontawesome.com/2a7cef1bb1.js"></script>
+    <div class="main-container">
+      <!-- COL 1 -->
+      <div class="main-col-1">
+        <div class="res-for-recipe"></div>
+
+        <div class="list-res"></div>
+        <div class="credits">
+          <p>Inspired by Jonas Schmedtmann</p>
+          <p>Developed Owen Giri &copy; 2019</p>
+          <p>API from Food2Fork</p>
+        </div>
+      </div>
+
+      <!-- COL 2 -->
+      <div class="main-col-2">
+        <div class="top-col-2">
+          <a href=""><h2>Mood For Food</h2></a>
+          <div class="search">
+            <div class="saved">
+              <div class="dropdown">
+                <button class="dropbtn">Saved</button>
+                <div class="dropdown-content">
+                  <ul class="saved-list"></ul>
+                </div>
+              </div>
+            </div>
+            <form class="search-form">
+              <input class="search-query" type="text" placeholder="Search..." />
+              <button class="search-btn">Search</button>
+            </form>
+          </div>
+        </div>
+        <div class="recipe-show">
+          <div
+            class="recipe-img"
+            style="background: url('https://images.pexels.com/photos/5929/food-salad-dinner-eating.jpg?auto=compress&cs=tinysrgb&h=650&w=940')no-repeat center center/cover"
+          >
+            <div class="food-title-content">
+              <h1 class="food-title">WELCOME.</h1>
+              <h4 class="food-title">search from over 1000s of recipes</h4>
+            </div>
+            <div class="color-overlay"></div>
+          </div>
+
+          <h3 class="popular-searches">Popular Searches</h3>
+          <div class="shocase-start-grid">
+            <div class="pizza-panel">
+              <div class="panel-content">
+                <h4 class="panel-title">Pizza</h4>
+              </div>
+              <div class="color-overlay"></div>
+            </div>
+
+            <div class="cake-panel">
+              <div class="panel-content">
+                <h4 class="panel-title">Cake</h4>
+              </div>
+              <div class="color-overlay"></div>
+            </div>
+
+            <div class="vegan-panel">
+              <div class="panel-content">
+                <h4 class="panel-title">Vegan</h4>
+              </div>
+              <div class="color-overlay"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="js/bundle.js"></script></body>
 </html>
