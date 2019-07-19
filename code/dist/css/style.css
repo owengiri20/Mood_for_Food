@@ -18,10 +18,11 @@ body {
 .loader {
   margin-left: 36%;
   margin-top: 20%;
+  margin-bottom: 10%;
 
   height: 30px;
   width: 20px;
-  animation: rotate 2.5s linear infinite;
+  animation: rotate 0.4s linear infinite;
   transform-origin: bottom center;
 }
 
@@ -36,7 +37,7 @@ body {
 }
 .circle:nth-child(1) {
   background-color: #69d06c;
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 
 @keyframes rotate {

@@ -7,7 +7,7 @@ import * as searchView from "./views/searchView";
 import * as recipeView from "./views/recipeView";
 import * as savesView from "./views/savesView";
 
-import { uiElements } from "./views/base";
+import { uiElements, clearLoader, renderLoader } from "./views/base";
 
 // imports
 
@@ -30,6 +30,7 @@ const controlSearch = async query => {
     searchView.clearSearchInput();
 
     // render loader feedback
+    renderLoader(uiElements.col1);
 
     try {
       // 4) Search for recipes
@@ -41,10 +42,12 @@ const controlSearch = async query => {
       searchView.renderRecipes(state.search.results);
 
       // clear loader
+      setTimeout(clearLoader(), 1000);
     } catch (error) {
       console.log(error);
       alert("something wrong with search");
       // clear loader
+      clearLoader();
     }
   }
 };
@@ -61,6 +64,7 @@ const controlRecipe = async () => {
     recipeView.clearRecipe();
 
     // render loader
+    renderLoader(uiElements.recipe);
 
     // highlight selected recipe
     try {
@@ -71,10 +75,12 @@ const controlRecipe = async () => {
       state.recipe.calculateTime();
       state.recipe.calculateServings();
 
+      clearLoader();
       // render recipe in UI
       recipeView.renderRecipe(state.recipe, state.saves.isSaved(id));
     } catch (error) {
       console.log("error RECIPE :" + error);
+      clearLoader();
     }
   }
 };
