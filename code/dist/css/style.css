@@ -1,8 +1,3 @@
-/* :root {
-} */
-
-/* document.querySelector('.recipe-img').style.background =  */
-
 button {
   cursor: pointer;
 }
@@ -15,6 +10,7 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+/* LOADER */
 .loader {
   margin-left: 36%;
   margin-top: 20%;
@@ -52,11 +48,12 @@ body {
   }
 }
 
+/* LOADER */
+
 .main-container {
   display: grid;
   grid-template-columns: 20rem auto;
   height: 100vh;
-  /* max-height: 100vh; */
 }
 
 .main-col-1 {
@@ -125,8 +122,6 @@ img {
   height: 100%;
 }
 
-/* background: url("images/shoe3.jpg") no-repeat center center/cover; */
-
 .top-col-2 {
   display: grid;
   grid-template-columns: 0.7fr auto;
@@ -178,10 +173,6 @@ img {
 .shocase-start-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* align-self: center;
-  align-content: center;
-  align-items: center;
-  align-self: center; */
   justify-items: center;
   align-items: center;
   height: 55vh;
@@ -286,7 +277,6 @@ img {
 .author-save i {
   margin-top: 0.73rem;
   color: #4caf50;
-  /* background: green; */
 }
 
 .ing-list {
@@ -298,6 +288,8 @@ img {
 .ing-list li {
   margin-bottom: 0.7rem;
 }
+
+/* SCROLL BAR */
 /* Turn on custom 8px wide scrollbar */
 ::-webkit-scrollbar {
   width: 14px; /* 1px wider than Lion. */
@@ -321,6 +313,7 @@ img {
   background: rgba(0, 0, 0, 0.3); /* Some darker color when you click it */
   border-radius: 100px;
 }
+/* SCROLL BAR */
 
 /* Saved drop down */
 /* Dropdown Button */
@@ -336,7 +329,6 @@ img {
 .dropdown {
   position: relative;
   margin-right: 0.3rem;
-  /* display: inline-block; */
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -352,11 +344,6 @@ img {
 
 .dropdown-content li {
   list-style: none;
-  /* display: flex;
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  justify-content: space-around; */
 }
 
 .save-link-content {
