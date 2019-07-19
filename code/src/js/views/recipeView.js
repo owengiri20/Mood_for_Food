@@ -40,6 +40,4 @@ export const renderRecipe = (recipe, isSaved) => {
     `;
 
   uiElements.recipe.insertAdjacentHTML("afterbegin", markup);
-
-  console.log(recipe.img);
 };

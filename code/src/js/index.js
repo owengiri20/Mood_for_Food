@@ -37,10 +37,8 @@ const controlSearch = async query => {
 
       // 5) render results on UI
       searchView.renderResultsForLabel(query, state.search.results.length);
-      console.log(state.search.results.length);
 
       searchView.renderRecipes(state.search.results);
-      console.log(state.search.results);
 
       // clear loader
     } catch (error) {

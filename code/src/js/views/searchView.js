@@ -21,8 +21,6 @@ export const renderResultsForLabel = (query, recipeLength) => {
 };
 
 export const renderRecipes = recipes => {
-  console.log(recipes);
-
   recipes.forEach(recipe => {
     const markup = `
         <a href="#${recipe.recipe_id}" class="recipe-link">
