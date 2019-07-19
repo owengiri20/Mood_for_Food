@@ -18,7 +18,6 @@ const state = {};
 const controlSearch = async query => {
   // 1) get query from view
   if (!query) query = " ";
-  // const query = searchView.getSearchQuery(); // TODO
   if (query) {
     // 2) new search object and add to state
     state.search = new Search(query);
@@ -139,5 +138,3 @@ uiElements.recipe.addEventListener("click", e => {
     controlSearch("vegan");
   }
 });
-
-// popalar picks clicked

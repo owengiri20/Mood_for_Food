@@ -1,12 +1,6 @@
 import axios from "axios";
 import { key } from "../config";
 
-// this.title = res.data.recipe.title;
-//       this.author = res.data.recipe.publisher;
-//       this.img = res.data.recipe.image_url;
-//       this.url = res.data.recipe.source_url;
-//       this.ingredients = res.data.recipe.ingredients;
-
 export default class Recipe {
   constructor(id) {
     this.id = id;

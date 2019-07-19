@@ -5,8 +5,6 @@ export const clearRecipe = () => {
 };
 
 export const renderRecipe = (recipe, isSaved) => {
-  //   uiElements.recipeImg.style.background = ``;
-
   const markup = `
     <div class="recipe-img" style="background: url('${
       recipe.img

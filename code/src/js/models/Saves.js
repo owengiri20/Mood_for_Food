@@ -28,7 +28,6 @@ export default class Saves {
     return this.savesArr.length;
   }
 
-  // write
   saveData() {
     localStorage.setItem("savedRecipes", JSON.stringify(this.savesArr));
   }
